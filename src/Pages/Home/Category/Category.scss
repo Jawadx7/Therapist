@@ -1,0 +1,57 @@
+.category {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  .cat_box {
+    padding: 1rem;
+    border-radius: 1rem;
+
+    .top {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--grey);
+
+      p {
+        font-size: 15px;
+        margin-top: 5px;
+        line-height: 1.3rem;
+      }
+    }
+
+    .bottom {
+      padding-top: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      small {
+        font-size: 15px;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+      }
+    }
+
+    &.individual {
+      background: rgba(0, 128, 43, 0.08);
+    }
+    &.couple {
+      background: rgba(132, 0, 255, 0.08);
+    }
+    &.teen {
+      background: rgba(221, 255, 0, 0.08);
+    }
+    &.psychiatry {
+      background: rgba(114, 114, 114, 0.1);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}

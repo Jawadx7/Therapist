@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import Home from "./Pages/Home/Home";
+import Therapists from "./Pages/Therapists/Therapists";
+import { useState } from "react";
 
 function App() {
+  const [active, setActive] = useState("green");
+
+  const openNav = () => {
+    setActive(0);
+  };
+  const closeNav = () => {
+    setActive("-100%");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header active={active} openNav={openNav} closeNav={closeNav} />
+      <Routes>
+        <Route path="/">
+          <Route index element={<Home />} />
+          <Route path="therapists" element={<Therapists />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
