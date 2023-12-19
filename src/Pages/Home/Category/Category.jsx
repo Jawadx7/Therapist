@@ -1,4 +1,5 @@
 import "./Category.scss";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 const Category = () => {
   return (
@@ -13,7 +14,7 @@ const Category = () => {
         </div>
         <div className="bottom">
           <small>Explore More</small>
-          <div className="icon">&times;</div>
+          <FaChevronCircleRight className="icon" />
         </div>
       </div>
       <div className="cat_box couple">
@@ -26,7 +27,7 @@ const Category = () => {
         </div>
         <div className="bottom">
           <small>Explore More</small>
-          <div className="icon">&times;</div>
+          <FaChevronCircleRight className="icon" />
         </div>
       </div>
       <div className="cat_box teen">
@@ -39,7 +40,7 @@ const Category = () => {
         </div>
         <div className="bottom">
           <small>Explore More</small>
-          <div className="icon">&times;</div>
+          <FaChevronCircleRight className="icon" />
         </div>
       </div>
       <div className="cat_box psychiatry">
@@ -52,7 +53,7 @@ const Category = () => {
         </div>
         <div className="bottom">
           <small>Explore More</small>
-          <div className="icon">&times;</div>
+          <FaChevronCircleRight className="icon" />
         </div>
       </div>
     </section>

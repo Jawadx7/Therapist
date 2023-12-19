@@ -3,6 +3,10 @@ import HeroPic from "../../asserts/hero-img.png";
 import Help from "./Help/Help";
 import Category from "./Category/Category";
 import Magazine from "./Magazine/Magazine";
+import { CiUser } from "react-icons/ci";
+import { LiaDollarSignSolid } from "react-icons/lia";
+import { PiVideoCameraLight } from "react-icons/pi";
+import Blog from "./Blog/Blog";
 
 const Home = () => {
   return (
@@ -28,15 +32,15 @@ const Home = () => {
 
           <div className="features">
             <span>
-              <div className="icon">&#9776;</div>
+              <CiUser className="icon" />
               <small>No account needed</small>
             </span>
             <span>
-              <div className="icon">&#9776;</div>
+              <LiaDollarSignSolid className="icon" />
               <small>Free to connect</small>
             </span>
             <span>
-              <div className="icon">&#9776;</div>
+              <PiVideoCameraLight className="icon" />
               <small>Online and face to face</small>
             </span>
           </div>
@@ -46,6 +50,7 @@ const Home = () => {
       <Category />
       <Help />
       <Magazine />
+      <Blog />
     </div>
   );
 };

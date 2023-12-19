@@ -1,6 +1,12 @@
 import "./Magazine.scss";
 import Post1 from "../../../asserts/magazine-1.png";
 import Post2 from "../../../asserts/magazine-2.png";
+// import { FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
+import { CiBadgeDollar } from "react-icons/ci";
+import { PiMedalFill } from "react-icons/pi";
+import { MdDashboard } from "react-icons/md";
+import { BsCalendar3Event } from "react-icons/bs";
 
 const Magazine = () => {
   return (
@@ -21,19 +27,19 @@ const Magazine = () => {
 
           <ul className="checkList">
             <li>
-              <div className="icon">&times;</div>
+              <FaCheck className="icon" />
               Guidance you can trust
             </li>
             <li>
-              <div className="icon">&times;</div>
+              <FaCheck className="icon" />
               Skills for life success
             </li>
             <li>
-              <div className="icon">&times;</div>
+              <FaCheck className="icon" />
               Strategies to feel better
             </li>
             <li>
-              <div className="icon">&times;</div>
+              <FaCheck className="icon" />
               Strategies to overcome stress
             </li>
           </ul>
@@ -47,7 +53,7 @@ const Magazine = () => {
 
       <div className="post post2">
         <div className="post_img">
-          <img src={Post1} alt="" />
+          <img src={Post2} alt="" />
         </div>
 
         <div className="text">
@@ -61,20 +67,20 @@ const Magazine = () => {
 
           <ul className="checkList">
             <li>
-              <div className="icon">&times;</div>
-              Guidance you can trust
+              <CiBadgeDollar />
+              Absolutely free of charge
             </li>
             <li>
-              <div className="icon">&times;</div>
-              Skills for life success
+              <PiMedalFill />
+              Qualified Therapists
             </li>
             <li>
-              <div className="icon">&times;</div>
-              Strategies to feel better
+              <MdDashboard />
+              Personalized Dashboard
             </li>
             <li>
-              <div className="icon">&times;</div>
-              Strategies to overcome stress
+              <BsCalendar3Event />
+              Convenient
             </li>
           </ul>
 
