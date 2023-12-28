@@ -1,7 +1,6 @@
 import "./Blog.scss";
-import blog1 from "../../../asserts/post-1.png";
-import blog2 from "../../../asserts/post-2.png";
-import blog3 from "../../../asserts/post-3.png";
+import Blogposts from "../../../Data/BlogPosts";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -16,58 +15,22 @@ const Blog = () => {
         </p>
       </div>
       <div className="blogs_container">
-        <div className="blog_box">
-          <div className="blog_img">
-            <img src={blog1} alt="" />
+        {Blogposts.map(({ id, img, category, writer, title, body }) => (
+          <div key={id} className="blog_box">
+            <div className="blog_img">
+              <img src={img} alt="" />
+            </div>
+            <div className="details">
+              <small>{writer}</small>
+              <div className={`cat ${category}`}>{category}</div>
+            </div>
+            <div className="title">{title}</div>
+            <p>{body.length > 100 ? body.slice(0, 100) : body}</p>
+            <Link to={`/blog/${id}`} className="btn">
+              Read more
+            </Link>
           </div>
-          <div className="details">
-            <small>Susan Krauss . 3 days ago</small>
-            <div className="cat news">News</div>
-          </div>
-          <div className="title">
-            Why Constantly Seeking Approval Is Bad for Your Relationship
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            repellendus minus ipsam ea sit quibusdam suscipit cum eum nostrum
-            unde.
-          </p>
-          <button className="btn">Read more</button>
-        </div>
-        <div className="blog_box">
-          <div className="blog_img">
-            <img src={blog2} alt="" />
-          </div>
-          <div className="details">
-            <small>Samoon Ahmad . 7 days ago</small>
-            <div className="cat blog">Blog</div>
-          </div>
-          <div className="title">
-            Targeting the Gut in The Treatment of Mental Illness
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            repellendus minus ipsam ea sit quibusdam suscipit cum eum nostrum
-            unde.
-          </p>
-          <button className="btn">Read more</button>
-        </div>
-        <div className="blog_box">
-          <div className="blog_img">
-            <img src={blog3} alt="" />
-          </div>
-          <div className="details">
-            <small>Reccardo Delle . 2 hours ago</small>
-            <div className="cat news">News</div>
-          </div>
-          <div className="title">Understanding Atypical Anorexia Nervosa</div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            repellendus minus ipsam ea sit quibusdam suscipit cum eum nostrum
-            unde.
-          </p>
-          <button className="btn">Read more</button>
-        </div>
+        ))}
       </div>
     </section>
   );

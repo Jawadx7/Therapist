@@ -6,6 +6,9 @@ import Home from "./Pages/Home/Home";
 import Therapists from "./Pages/Therapists/Therapists";
 import { useState } from "react";
 import BlogContent from "./Pages/BlogContent/BlogContent";
+import Blogposts from "./Data/BlogPosts";
+import Missing from "./Pages/Missing";
+import TherapistPage from "./Pages/Therapists/TherapistPage/TherapistPage";
 
 function App() {
   const [active, setActive] = useState("green");
@@ -24,8 +27,13 @@ function App() {
         <Route path="/">
           <Route index element={<Home />} />
           <Route path="therapists" element={<Therapists />} />
-          <Route path="blog/:id" element={<BlogContent />} />
+          <Route
+            path="blog/:id"
+            element={<BlogContent Blogposts={Blogposts} />}
+          />
+          <Route path="therapists/:id" element={<TherapistPage />} />
         </Route>
+        <Route path="*" element={<Missing />} />
       </Routes>
       <Footer />
     </Router>

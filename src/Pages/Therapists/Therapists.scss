@@ -1,3 +1,236 @@
 .therapists {
   padding-top: 6rem;
+
+  .search {
+    width: 70%;
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+
+  main {
+    padding: 2rem 5%;
+    background: #1e323d27;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @media screen and (max-width: 1000px) {
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 10px;
+      background: var(--white);
+
+      @media screen and (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .categories {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+      }
+
+      .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1000px) {
+          flex-direction: column;
+          align-items: flex-start;
+          row-gap: 10px;
+        }
+        @media screen and (max-width: 700px) {
+          flex-direction: row;
+        }
+
+        span {
+          color: var(--primary-light);
+          cursor: pointer;
+        }
+      }
+
+      article {
+        margin: 1rem 0;
+        .top {
+          h3 {
+            font-size: 16px;
+          }
+
+          .icon {
+            cursor: pointer;
+          }
+        }
+
+        .filter_items {
+          margin: 10px 0;
+          height: fit-content;
+          overflow: hidden;
+          transition: 0.3s ease;
+
+          &.active {
+            height: 0;
+          }
+
+          li {
+            list-style: none;
+            margin: 7px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            input {
+              width: 15px;
+              height: 15px;
+            }
+
+            small {
+              font-size: 14px;
+              color: var(--grey);
+            }
+          }
+        }
+      }
+    }
+
+    .therapists_list {
+      flex: 3;
+
+      // @media screen and (max-width: 1000px) {
+      //   flex: 3;
+      // }
+
+      @media screen and (max-width: 700px) {
+        width: 100%;
+      }
+
+      .therapist_box {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        gap: 10px;
+        background: var(--white);
+
+        @media screen and (max-width: 1000px) {
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 700px) {
+          width: 100%;
+        }
+
+        .img {
+          width: 10rem;
+          height: 13rem;
+          border-radius: 10px;
+
+          // @media screen and (max-width: 1000px) {
+          //   width: 8rem;
+          //   height: 10rem;
+          // }
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+
+        .middle {
+          flex: 3;
+          padding: 10px 1.3rem 10px 10px;
+
+          .name {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            h3 {
+              font-size: 18px;
+            }
+
+            .icon {
+              color: var(--primary);
+              font-size: 18px;
+            }
+
+            small {
+              font-size: 15px;
+              color: var(--grey);
+            }
+          }
+
+          .role {
+            margin: 10px 0;
+            font-size: 14px;
+          }
+
+          .bio {
+            font-size: 14px;
+            margin-bottom: 1rem;
+          }
+
+          .tags {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            // @media screen and (max-width: 700px) {
+            //   gap: 10px;
+            //   flex-direction: column;
+            // }
+          }
+        }
+
+        .info {
+          flex: 1;
+          padding: 10px;
+          border: 1px solid var(--dark);
+          border-radius: 10px;
+          text-align: center;
+
+          li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--grey);
+            margin-bottom: 10px;
+
+            &:nth-child(3) {
+              margin-bottom: 1rem;
+            }
+          }
+
+          .btn {
+            text-decoration: none;
+            width: 100%;
+            margin-bottom: 10px;
+          }
+
+          button {
+            margin-top: 1.2rem;
+          }
+        }
+      }
+    }
+  }
 }

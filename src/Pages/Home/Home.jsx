@@ -7,6 +7,7 @@ import { CiUser } from "react-icons/ci";
 import { LiaDollarSignSolid } from "react-icons/lia";
 import { PiVideoCameraLight } from "react-icons/pi";
 import Blog from "./Blog/Blog";
+import SearchBox from "../../Components/SearchBox";
 
 const Home = () => {
   return (
@@ -22,13 +23,7 @@ const Home = () => {
             sit?
           </p>
 
-          <div className="search_form">
-            <div className="dropdown">dropdown menu</div>
-            <div className="input">
-              <input type="text" placeholder="City, zip code" />
-              <button className="btn btn-primary">Search</button>
-            </div>
-          </div>
+          <SearchBox />
 
           <div className="features">
             <span>
